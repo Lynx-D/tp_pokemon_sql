@@ -140,4 +140,4 @@
         <h2>Erreur lors de la connexion.</h2>
     <?php endif; ?>
 </body>
-</html
+</html>
