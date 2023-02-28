@@ -104,7 +104,7 @@
                         </div>
                     <?php endfor;?>
                 </div>
-                <input type="number" name="pokeHP" placeholder="PV du pokémon" min="0" step="10">
+                <input type="number" name="pokeHP" placeholder="PV du pokémon" min="0" step="10" value="10">
                 <button class="clickBtn" type="submit" name="submit">Ajouter le pokemon</button>
             </form>
 
