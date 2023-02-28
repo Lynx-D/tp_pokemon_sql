@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Normal",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/normal.png"
+    },
+    {
+        "name": "Combat",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fighting.png"
+    },
+    {
+        "name": "Vol",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/flying.png"
+    },
+    {
+        "name": "Poison",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/poison.png"
+    },
+    {
+        "name": "Sol",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/ground.png"
+    },
+    {
+        "name": "Roche",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/rock.png"
+    },
+    {
+        "name": "Insecte",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/bug.png"
+    },
+    {
+        "name": "Spectre",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/ghost.png"
+    },
+    {
+        "name": "Acier",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/steel.png"
+    },
+    {
+        "name": "Feu",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fire.png"
+    },
+    {
+        "name": "Eau",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/water.png"
+    },
+    {
+        "name": "Plante",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/grass.png"
+    },
+    {
+        "name": "Electrique",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/electric.png"
+    },
+    {
+        "name": "Psy",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/psychic.png"
+    },
+    {
+        "name": "Glace",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/ice.png"
+    },
+    {
+        "name": "Dragon",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/dragon.png"
+    },
+    {
+        "name": "Ténèbres",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/dark.png"
+    },
+    {
+        "name": "Fée",
+        "image": "https://raw.githubusercontent.com/msikma/pokesprite/master/misc/types/gen8/fairy.png"
+    }
+]
