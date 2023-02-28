@@ -1,1 +1,1 @@
-# tp_pokemon_sql
+# IT School project about Pokemon !
