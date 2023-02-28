@@ -90,7 +90,7 @@
     <a href="./index.php"><button class="clickBtn">Retourner à l'accueil</button></a>
     <?php if(!$bddError) :?>
         <div class="formWrapper">
-            <img src="./assets/International_Pokémon_logo.svg" alt="Logo Pokemon">
+            <a href="./index.php"><img src="./assets/International_Pokémon_logo.svg" alt="Logo Pokemon"></a>
             <h2>Ajout d'un Pokemon</h2>
             <form action="<?=$_SERVER["PHP_SELF"]?>" method="post" enctype="multipart/form-data">
                 <input type="text" name="pokeName" placeholder="Nom du pokémon">
@@ -104,7 +104,7 @@
                         </div>
                     <?php endfor;?>
                 </div>
-                <input type="number" name="pokeHP" placeholder="PV du pokémon">
+                <input type="number" name="pokeHP" placeholder="PV du pokémon" min="0" step="10">
                 <button class="clickBtn" type="submit" name="submit">Ajouter le pokemon</button>
             </form>
 

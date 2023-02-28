@@ -75,17 +75,22 @@
                 }
     
                 $json_pokeType = json_encode($pokeTypes);
-    
+
                 if(isset($pokeSprite) && $pokeSprite["size"] > 0  ){
                     $from = $pokeSprite["tmp_name"];
-                    $pokeSprite = "images/".$pokeSprite["name"];
-                    move_uploaded_file($from, $pokeSprite);
+                    $newSpritePath = "images/".$pokeSprite["name"];
+                    move_uploaded_file($from, $newSpritePath);
+
+                    $requete = "UPDATE pokemon SET nom=?, hp=?, sprite=?, types=? WHERE id=?";
+                    $stmt = $bdd->prepare($requete);
+                    $stmt->execute([$pokeName, $pokeHP, $newSpritePath, $json_pokeType, $pokemonID]);
+                    $isEdited = true;
+                } else {
+                    $requete = "UPDATE pokemon SET nom=?, hp=?, types=? WHERE id=?";
+                    $stmt = $bdd->prepare($requete);
+                    $stmt->execute([$pokeName, $pokeHP, $json_pokeType, $pokemonID]);
+                    $isEdited = true;
                 }
-                
-                $requete = "UPDATE pokemon SET nom=?, hp=?, sprite=?, types=? WHERE id=?";
-                $stmt = $bdd->prepare($requete);
-                $stmt->execute([$pokeName, $pokeHP, $pokeSprite, $json_pokeType, $pokemonID]);
-                $isEdited = true;
             }
         }
     }
@@ -104,7 +109,7 @@
     <a href="./index.php"><button class="clickBtn">Retourner à l'accueil</button></a>
     <?php if(!$bddError) :?>
         <div class="formWrapper">
-            <img src="./assets/International_Pokémon_logo.svg" alt="Logo Pokemon">
+        <a href="./index.php"><img src="./assets/International_Pokémon_logo.svg" alt="Logo Pokemon"></a>
             <h2>Modification de <?= $pokemon['nom'] ?></h2>
             <form action="<?=$_SERVER["PHP_SELF"]?>?id=<?= $pokemonID ?>" method="post" enctype="multipart/form-data">
                 <input type="text" name="pokeName" placeholder="Nom du pokémon" value="<?= $pokemon['nom'] ?>">
@@ -119,7 +124,7 @@
                         </div>
                     <?php endfor;?>
                 </div>
-                <input type="number" name="pokeHP" placeholder="PV du pokémon" value="<?= $pokemon['hp'] ?>">
+                <input type="number" name="pokeHP" placeholder="PV du pokémon" min="0" step="10" value="<?= $pokemon['hp'] ?>">
                 <button class="clickBtn" type="submit" name="submit">Mettre à jour le pokémon</button>
             </form>
             

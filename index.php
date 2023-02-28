@@ -37,7 +37,7 @@
                 <?php foreach ($pokemons as &$pokemon) :?>
                     <div class="pokemonCard">
                         <h3><?= $pokemon['nom'] ?></h3>
-                        <img class="pokemonSprite" src="<?= $pokemon['sprite'] ?>">
+                        <img class="pokemonSprite" src="<?= $pokemon['sprite'] ?>" onerror="this.src='./pokeball_default.png'">
                         <div class="pokemonType">
                             <?php $pokeTypes = json_decode($pokemon['types']); ?>
                             <?php foreach ($pokeTypes as &$pokeType) :?>
